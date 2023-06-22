@@ -20,6 +20,9 @@ COPY . .
 # Build the application
 RUN yarn build
 
+
+
+
 # Build nginx server
 FROM nginx:latest
 
