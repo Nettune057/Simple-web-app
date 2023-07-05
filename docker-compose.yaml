@@ -1,7 +1,7 @@
 services:
   frontend:
     container_name: client
-    build: ./web
+    image: nettune123/docker-course-frontend:1.0
     ports:
       - 80:80
     networks:
@@ -13,7 +13,7 @@ services:
 
   backend:
     container_name: server
-    build: ./nodejs
+    image: nettune123/docker-course-backend:1.0
     ports:
       - 4000:4000
     networks:
@@ -26,7 +26,7 @@ services:
       - db
   db:
     container_name: database
-    image: mongo
+    image: nettune123/mongo:1.0
     # environment:
     #   MONGO_INITDB_DATABASE: node-app
     ports:
