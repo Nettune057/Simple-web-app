@@ -22,7 +22,8 @@ const CreateStatForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:4000/stats/create', { ...formState })
+      .post('http://internal-tungnt-LB-1708287788.us-east-1.elb.amazonaws.com', { ...formState })
+      // .post('http://localhost/stats/create', { ...formState })
       .then((response) => {
         stats.push(response.data);
         setStats((prevState) => [...stats]);

@@ -14,14 +14,14 @@ const Stats = (props) => {
   const { stats, setStats } = props;
 
   useEffect(() => {
-    axios.get("http://localhost:4000/stats").then((response) => {
+    axios.get("http://internal-tungnt-LB-1708287788.us-east-1.elb.amazonaws.com:4000/stats").then((response) => {
       setStats(response.data);
     });
   }, []);
 
   const handleDelete = (id) => {
     axios
-      .post("http://localhost:4000/stats/delete", {
+      .post("http://internal-tungnt-LB-1708287788.us-east-1.elb.amazonaws.com:4000/stats/delete", {
         id,
       })
       .then((response) => {
